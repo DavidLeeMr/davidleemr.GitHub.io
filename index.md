@@ -1,9 +1,9 @@
 ## Telegram 官方客户端支持中文语言
 
 点击链接打开 Telegram 客户端更改语言:
-https://t.me/setlanguage/classic-chs
+[中文语言包安装](https://t.me/setlanguage/classic-chs)
 
-中文语言包频道：https://t.me/Simplified_Chinese
+中文语言包频道：[简体中文语言包分发频道](https://t.me/Simplified_Chinese)
 
 
 You can use the [editor on GitHub](https://github.com/DavidLeeMr/davidleemr.GitHub.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
