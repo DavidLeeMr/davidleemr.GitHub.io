@@ -1,4 +1,4 @@
-## Telegram 官方客户端支持中文语言
+## Telegram中文
 
 点击链接打开 Telegram 客户端更改语言:
 [中文语言包安装](https://t.me/setlanguage/classic-chs)
