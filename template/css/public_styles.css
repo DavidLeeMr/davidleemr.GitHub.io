@@ -1,0 +1,118 @@
+/* public_styles.css */
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color: #ffffff;
+    -moz-box-shadow: 0px 0px 10px #f0f0f0; /* 老的 Firefox */
+    box-shadow: 0px 0px 10px #f0f0f0;
+}
+/* 导航栏样式 */
+.navbar a {
+    float: left;
+    display: block;
+    color: #566473;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+/* 右侧链接*/
+.navbar .right {
+    float: right;
+}
+/* 居中链接*/
+.navbar .none {
+    float: none;
+}
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #666;
+    color: white;
+}
+/* 列容器 */
+.row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+/* 创建两个列 */
+/* 主要的内容区域 */
+.main {   
+    -ms-flex: 55%; /* IE10 */
+    flex: 55%;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    padding: 20px;
+    line-height: 1.8
+}
+/* 边栏 */
+.sidebar {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    padding: 0px;
+}
+/* 二级边栏 */
+.side {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    padding: 20px;
+}
+
+/* 底部 */
+.footer {
+    padding: 10px;
+    text-align: center;
+}
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+
+a {
+	text-decoration: none;
+	font-size: 0.8em;
+}
+/* Demo Buttons Style */
+a:hover {
+    text-decoration: none
+}
+.codrops-demos {
+	padding-top: 1em;
+}
+.codrops-demos a {
+	display: inline-block;
+	margin: 0.5em 0.1em;
+	padding: 0.35em 1.0em;
+	outline: none;
+	color: #566473;
+	text-decoration: none;
+	font-weight: 700;
+	border-radius: 5px;
+	border: 2px solid transparent;
+}
+.codrops-demos a:hover,
+.codrops-demos a.current-demo {
+	color: inherit;
+	border-color: initial;
+}

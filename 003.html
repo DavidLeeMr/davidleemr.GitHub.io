@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习者导航NEW</title>
+    <link rel="canonical" href="https://cceclub.org"/>
+    <link rel="shortcut icon" href="icon.png"/>
+    <link rel="apple-touch-icon" href="icon.png"/>
+    
+    <link rel="stylesheet" href="../assets/css/fonts/linecons/css/linecons.css">
+    <link rel="stylesheet" href="/template/css/bootstrap.css">
+    <!--<link rel="stylesheet" href="../assets/css/xenon-core.css">-->
+    <link rel="stylesheet" href="../assets/css/xenon-components.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/template/css/public_styles.css">
+    <script src="../assets/js/jquery-1.11.1.min.js"></script>
+    
+    <meta name="keywords" content="学习者导航,查经研经,学术百科,Telegram，V2ray,Mtproto搭建，Proxy搭建">
+    <meta name="description" content="学习者导航，一个收录优质网站的导航Page。汇集国内外优质学习平台网站，分享办公应用、学术百科、音乐艺术、查经研经……学习者必备的上网导航，David Lee先森的自由page。">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="学习者导航">
+    <meta property="og:url" content="https://cceclub.org">
+    <meta property="og:site_name" content="学习者导航">
+    <meta property="og:image" content="icon.png">
+    <meta property="og:description" content="学习者导航，一个收录优质网站的导航Page。汇集国内外优质学习平台网站，分享办公应用、学术百科、音乐艺术、查经研经……学习者必备的上网导航，David Lee先森的自由page。">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+.form-control {
+    height: 35px;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    width: 60%;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075) ;
+}
+.form-control:hover {
+    border: #66afe9 solid 1px;
+}
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+}
+.btn {
+    padding: 5px 10px;
+    width: 85px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color:#ccc
+}
+.btn-search {
+    border-radius: 4px;
+    background: #3399CC;
+    color: #FFF;
+    border: #3399CC solid 1px;
+}
+.btn-search:hover {
+    background: #FFF;
+    color: #3399CC;
+    border: #3399CC solid 1px;
+}
+</style></head>
+<body>
+<div class="navbar">
+	<a href="#"><img src="icon.png" width="15"/></a>
+	<a href="/index.html">首页</a>
+	<a href="http://bbs.cceclub.org">论坛</a>
+	<a href="/note.html">笔记</a>
+	<a href="https://cceclub.org" class="right">#</a>
+</div>
+<div class="row">
+	<div class="main">
+	    <br/>
+		<h4><img src="/icon/Browser-icon.png" height="18"/>搜索引擎</h4>
+	    <form name="search" action="https://www.google.com/search" target="_blank">
+	        <div class="input-group" style="text-align:center;">
+	            <img src="/icon/google-icon.png" height="20"/>
+	            <input type="text" name="q" class="form-control" placeholder="请输入关键字" maxlength="100">
+	            <span class="input-group-btn">
+	                <button class="btn btn-default btn-search" name="search" type="submit">谷歌搜索</button>
+	            </span></div>
+		</form>
+	    <form name="search" action="https://cn.bing.com/search" target="_blank">
+	        <div class="input-group" style="text-align:center;">
+	            <img src="/icon/Bing-icon.png" height="20"/>
+	            <input type="text" name="q" class="form-control" placeholder="请输入关键字" maxlength="100">
+	            <span class="input-group-btn">
+	                <button class="btn btn-default btn-search" name="search" type="submit">必应搜索</button>
+	            </span></div>
+		</form>
+		<nav class="codrops-demos" style="text-align:center;">
+			<a href="https://duckduckgo.com" target="_blank"><img src="/icon/DuckDuckGo-icon.png" height="12"/> DuckDuckGo</a>
+			<a href="https://translate.google.cn" target="_blank">谷歌翻译</a>
+		    <a href="https://scholar.google.com" target="_blank">谷歌学术</a>
+		    <a href="https://mail.google.com/" target="_blank"><img src="/icon/Gmail-icon.png" height="12"/> Gmail</a>
+		    <a href="https://zh.wikipedia.org" target="_blank"><img src="/icon/Wikipedia-icon.png" height="12"/> 维基百科</a>
+		<br/>
+		<br/>
+		<div style="BORDER-TOP: #ccc 1px dashed; OVERFLOW: hidden; HEIGHT: 1px"></div>
+		</nav>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		
+		<h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="常用推荐"></i>常用推荐</h4>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://dribbble.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://dribbble.com/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/dribbble.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>Dribbble</strong>
+                                </a>
+                                <p class="overflowClip_2">全球UI设计师作品分享平台。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://behance.net/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://behance.net/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/behance.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>Behance</strong>
+                                </a>
+                                <p class="overflowClip_2">Adobe旗下的设计师交流平台，来自世界各地的设计师在这里分享自己的作品。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('http://www.ui.cn/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="http://www.ui.cn/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/uicn.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>UI中国</strong>
+                                </a>
+                                <p class="overflowClip_2">图形交互与界面设计交流、作品展示、学习平台。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('http://www.zcool.com.cn/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="http://www.zcool.com.cn/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/zcool.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>站酷</strong>
+                                </a>
+                                <p class="overflowClip_2">中国人气设计师互动平台</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.pinterest.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.pinterest.com/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/pinterest.png" class="lozad img-circle" width="40">
+                            </a>
+                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>Pinterest</strong>
+                                </a>
+                                <p class="overflowClip_2">全球美图收藏采集站</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('http://huaban.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="http://huaban.com/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/huaban.png" class="lozad img-circle" width="40">
+                            </a>
+                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>花瓣</strong>
+                                </a>
+                                <p class="overflowClip_2">收集灵感,保存有用的素材</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://medium.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://medium.com/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/medium.png" class="lozad img-circle" width="40">
+                            </a>
+                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>Medium</strong>
+                                </a>
+                                <p class="overflowClip_2">高质量设计文章</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('http://www.uisdc.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="http://www.uisdc.com/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/uisdc.png" class="lozad img-circle" width="40">
+                            </a>
+                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>优设</strong>
+                                </a>
+                                <p class="overflowClip_2">设计师交流学习平台</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.producthunt.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.producthunt.com/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/producthunt.png" class="lozad img-circle" width="40">
+                            </a>
+                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>Producthunt</strong>
+                                </a>
+                                <p class="overflowClip_2">发现新鲜有趣的产品</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.youtube.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.youtube.com/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/youtube.png" class="lozad img-circle" width="40">
+                            </a>
+                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>Youtube</strong>
+                                </a>
+                                <p class="overflowClip_2">全球最大的学习分享平台</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.google.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.google.com/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/google.png" class="lozad img-circle" width="40">
+                            </a>
+                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>Google</strong>
+                                </a>
+                                <p class="overflowClip_2">全球最大的UI学习分享平台</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <!-- END 常用推荐 -->
+		
+		 
+		
+		<br/>
+		<br/>
+		<p style="text-align:center; color:red;" >免责声明：本站基于互联网自由分享，涉及上述网站内的任何信息或交易皆与本站无关。且本站不属于网站内容的提供者、制作者、所有者，一切版权归原网站所有；本页仅用以个人收藏和导航，请按照相关工具原定用途及原单位的规定使用；对于违反使用者所在地相关法律或原出处规定导致的一切后果本站不承担任何法律责任。</p>
+	</div>
+	<div class='sidebar'>
+	    <div class='side'>
+		<h3>关于本站</h3>
+		<p style='text-align:center;'><img src='icon.png' width='85'/></p>
+		<p style='text-align:center;'>一个收录优质网站的导航Page
+		<br/>简单、简约
+		<br/>David Lee先森的自由Page</p>
+		</div>
+		<div class='side'>
+		<h3>捐助本站</h3>
+		<p style='text-align:center;'>此网站为出于兴趣所作<br/>非营利网站</p>
+		</div>
+		<div class='side'>
+		<h3>联系方式</h3>
+		<p style='text-align:center;'>暂不开放</p>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<h5>[Designed by David.Lee / Copyright © 2020]</h5>
+</div>
+
+ <!-- 锚点平滑移动 -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+         //img lazy loaded
+         const observer = lozad();
+         observer.observe();
+
+        $(document).on('click', '.has-sub', function(){
+            var _this = $(this)
+            if(!$(this).hasClass('expanded')) {
+               setTimeout(function(){
+                    _this.find('ul').attr("style","")
+               }, 300);
+              
+            } else {
+                $('.has-sub ul').each(function(id,ele){
+                    var _that = $(this)
+                    if(_this.find('ul')[0] != ele) {
+                        setTimeout(function(){
+                            _that.attr("style","")
+                        }, 300);
+                    }
+                })
+            }
+        })
+        $('.user-info-menu .hidden-sm').click(function(){
+            if($('.sidebar-menu').hasClass('collapsed')) {
+                $('.has-sub.expanded > ul').attr("style","")
+            } else {
+                $('.has-sub.expanded > ul').show()
+            }
+        })
+        $("#main-menu li ul li").click(function() {
+            $(this).siblings('li').removeClass('active'); // 删除其他兄弟元素的样式
+            $(this).addClass('active'); // 添加当前元素的样式
+        });
+        $("a.smooth").click(function(ev) {
+            ev.preventDefault();
+
+            public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
+            ps_destroy();
+            $("html, body").animate({
+                scrollTop: $($(this).attr("href")).offset().top - 30
+            }, {
+                duration: 500,
+                easing: "swing"
+            });
+        });
+        return false;
+    });
+
+    var href = "";
+    var pos = 0;
+    $("a.smooth").click(function(e) {
+        $("#main-menu li").each(function() {
+            $(this).removeClass("active");
+        });
+        $(this).parent("li").addClass("active");
+        e.preventDefault();
+        href = $(this).attr("href");
+        pos = $(href).position().top - 30;
+    });
+    </script>
+    <!-- Bottom Scripts -->
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/TweenMax.min.js"></script>
+    <script src="../assets/js/resizeable.js"></script>
+    <script src="../assets/js/joinable.js"></script>
+    <script src="../assets/js/xenon-api.js"></script>
+    <script src="../assets/js/xenon-toggles.js"></script>
+    <!-- JavaScripts initializations and stuff -->
+    <script src="../assets/js/xenon-custom.js"></script>
+    <script src="../assets/js/lozad.js"></script>
+    <script language="javascript" type="text/javascript" src="/template/js/jihe.js"></script>
+</body>
+</html>

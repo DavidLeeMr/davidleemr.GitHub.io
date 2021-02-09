@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>测试-学习者导航</title>
+<link rel="canonical" href="https://cceclub.org/001.html"/>
+<link rel="shortcut icon" href="icon.png"/>
+<link rel="apple-touch-icon" href="icon.png"/>
+<meta name="keywords" content="学习者导航,查经研经,学术百科,Telegram，V2ray,Mtproto搭建，Proxy搭建">
+<meta name="description" content="学习者导航，一个收录优质网站的导航Page。汇集国内外优质学习平台网站，分享办公应用、学术百科、音乐艺术、查经研经……学习者必备的上网导航，David Lee先森的自由page。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="测试-学习者导航">
+<meta property="og:url" content="https://cceclub.org/001.html">
+<meta property="og:site_name" content="学习者导航">
+<meta property="og:image" content="icon.png">
+<meta property="og:description" content="学习者导航，一个收录优质网站的导航Page。汇集国内外优质学习平台网站，分享办公应用、学术百科、音乐艺术、查经研经……学习者必备的上网导航，David Lee先森的自由page。">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* public_styles.css */
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color: #ffffff;
+    -moz-box-shadow: 0px 0px 10px #f0f0f0; /* 老的 Firefox */
+    box-shadow: 0px 0px 10px #f0f0f0;
+}
+/* 导航栏样式 */
+.navbar a {
+    float: left;
+    display: block;
+    color: #566473;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+/* 右侧链接*/
+.navbar .right {
+    float: right;
+}
+/* 居中链接*/
+.navbar .none {
+    float: none;
+}
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #666;
+    color: white;
+}
+/* 列容器 */
+.row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+/* 创建两个列 */
+/* 主要的内容区域 */
+.main {   
+    -ms-flex: 55%; /* IE10 */
+    flex: 55%;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    padding: 20px;
+    line-height: 1.8
+}
+/* 边栏 */
+.sidebar {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    padding: 0px;
+}
+/* 二级边栏 */
+.side {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    padding: 20px;
+}
+
+/* 底部 */
+.footer {
+    padding: 10px;
+    text-align: center;
+}
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+
+a {
+	text-decoration: none;
+	font-size: 0.8em;
+}
+/* Demo Buttons Style */
+.codrops-demos {
+	padding-top: 1em;
+}
+.codrops-demos a {
+	display: inline-block;
+	margin: 0.5em 0.1em;
+	padding: 0.35em 1.0em;
+	outline: none;
+	color: #566473;
+	text-decoration: none;
+	font-weight: 700;
+	border-radius: 5px;
+	border: 2px solid transparent;
+}
+.codrops-demos a:hover,
+.codrops-demos a.current-demo {
+	color: inherit;
+	border-color: initial;
+}
+
+.form-control {
+    height: 35px;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    width:60%;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075) ;
+}
+.form-control:hover {
+    border: #66afe9 solid 1px;
+}
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+}
+.btn {
+    padding: 5px 10px;
+    width: 85px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color:#ccc
+}
+.btn-search {
+    border-radius: 4px;
+    background: #3399CC;
+    color: #FFF;
+    border: #3399CC solid 1px;
+}
+.btn-search:hover {
+    background: #FFF;
+    color: #3399CC;
+    border: #3399CC solid 1px;
+}
+
+</style></head>
+<body>
+<div class="navbar">
+	<a href="#"><img src="icon.png" width="15"/></a>
+	<a href="/index.html">首页</a>
+	<a href="http://bbs.cceclub.org">论坛</a>
+	<a href="/freedom.html">逃离微信宣言</a>
+	<a href="/note.html">笔记</a>
+	<a href="https://cceclub.org" class="right">导航新址</a>
+</div>
+<div class="row">
+	<div class="main">
+		<h1 style="text-align:center;">测试页</h1>
+		<br/>
+	    <form name="search" action="https://www.google.com/search" target="_blank">
+	        <div class="input-group">
+	            <img src="/icon/google-icon.png" height="20"/>
+	            <input type="text" name="q" class="form-control" placeholder="请输入关键字" maxlength="100">
+	            <span class="input-group-btn">
+	                <button class="btn btn-default btn-search" name="search" type="submit">谷歌搜索</button>
+	            </span></div>
+		</form>
+	    <br/>
+		<br/>
+		<DIV style="BORDER-TOP: #ccc 1px dashed; OVERFLOW: hidden; HEIGHT: 1px"></DIV>
+		<br/>
+		<br/>
+        <p style="text-align:center;">测试图片</p>
+        <p style="text-align:center;">
+        <img src="/image/55.jpg" width="250" height="250"/></p><br/>
+        <nav class="codrops-demos">
+        <p style="text-align:center;">
+            <a href="/note.html">笔记</a>
+	        <a href="/001.html">测试</a></p></nav>
+        <br/>
+        <strong>我们拒绝：</strong><br/>
+        -无处不在的审查与自我审查<br/>
+        -超负荷的社交网络与无法预知的举报者<br/>
+        -专断的封禁与删帖<br/>
+        -切断我们与外部互联网的联系<br/>
+        <br/>
+        <strong>我们呼吁：</strong><br/>
+        -邀请你的朋友注册Telegram，或带着你的微信群/QQ群一起整体迁移，可以加入我们的频道，一起探索Telegram。<br/>
+        -“我们会在没有黑暗的地方相见”——乔治·奥威尔《1984》<br/>
+        <br/>
+	</div>
+    
+	<div class='sidebar'>
+	    <div class='side'>
+		<h3>关于本站</h3>
+		<p style='text-align:center;'><img src='icon.png' width='85'/></p>
+		<p style='text-align:center;'>一个收录优质网站的导航Page
+		<br/>简单、简约
+		<br/>David Lee先森的自由Page</p>
+		</div>
+		<div class='side'>
+		<h3>捐助本站</h3>
+		<p style='text-align:center;'>此网站为出于兴趣所作<br/>非营利网站</p>
+		</div>
+		<div class='side'>
+		<h3>联系方式</h3>
+		<p style='text-align:center;'>暂不开放</p>
+		</div>
+	</div>
+	
+</div>
+<div class="footer">
+	<h5>[Designed by David.Lee / Copyright © 2020]</h5>
+</div>
+<script type="text/javascript">
+    ! function () {
+        function o(w, v, i) {
+            return w.getAttribute(v) || i
+        }
+        function j(i) {
+            return document.getElementsByTagName(i)
+        }
+        function l() {
+            var i = j("script"),
+                w = i.length,
+                v = i[w - 1];
+            return {
+                l: w,
+                z: o(v, "zIndex", -1),
+                o: o(v, "opacity", 0.5),
+                c: o(v, "color", "0,0,0"),
+                n: o(v, "count", 100)
+            }
+        }
+        function k() {
+            r = u.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, n = u.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        }
+        function b() {
+            e.clearRect(0, 0, r, n);
+            var w = [f].concat(t);
+            var x, v, A, B, z, y;
+            t.forEach(function (i) {
+                i.x += i.xa, i.y += i.ya, i.xa *= i.x > r || i.x < 0 ? -1 : 1, i.ya *= i.y > n || i.y < 0 ? -1 : 1, e.fillRect(i.x - 0.5, i.y - 0.5, 1, 1);
+                for (v = 0; v < w.length; v++) {
+                    x = w[v];
+                    if (i !== x && null !== x.x && null !== x.y) {
+                        B = i.x - x.x, z = i.y - x.y, y = B * B + z * z;
+                        y < x.max && (x === f && y >= x.max / 2 && (i.x -= 0.03 * B, i.y -= 0.03 * z), A = (x.max - y) / x.max, e.beginPath(), e.lineWidth = A / 2, e.strokeStyle = "rgba(" + s.c + "," + (A + 0.2) + ")", e.moveTo(i.x, i.y), e.lineTo(x.x, x.y), e.stroke())
+                    }
+                }
+                w.splice(w.indexOf(i), 1)
+            }), m(b)
+        }
+        var u = document.createElement("canvas"),
+            s = l(),
+            c = "c_n" + s.l,
+            e = u.getContext("2d"),
+            r, n, m = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) {
+                window.setTimeout(i, 1000 / 45)
+            },
+            a = Math.random,
+            f = {
+                x: null,
+                y: null,
+                max: 20000
+            };
+        u.id = c;
+        u.style.cssText = "position:fixed;top:0;left:0;z-index:" + s.z + ";opacity:" + s.o;
+        j("body")[0].appendChild(u);
+        k(), window.onresize = k;
+        window.onmousemove = function (i) {
+            i = i || window.event, f.x = i.clientX, f.y = i.clientY
+        }, window.onmouseout = function () {
+            f.x = null, f.y = null
+        };
+        for (var t = [], p = 0; s.n > p; p++) {
+            var h = a() * r,
+                g = a() * n,
+                q = 2 * a() - 1,
+                d = 2 * a() - 1;
+            t.push({
+                x: h,
+                y: g,
+                xa: q,
+                ya: d,
+                max: 6000
+            })
+        }
+        setTimeout(function () {
+            b()
+        }, 100)
+    }();
+</script>
+</body>
+</html>

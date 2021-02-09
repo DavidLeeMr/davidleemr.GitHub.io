@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学习者导航</title>
+<link rel="canonical" href="https://cceclub.org"/>
+<link rel="shortcut icon" href="icon.png"/>
+<link rel="apple-touch-icon" href="icon.png"/>
+<link rel="stylesheet" type="text/css" href="/template/css/public_styles.css">
+<meta name="keywords" content="学习者导航,查经研经,学术百科,Telegram，V2ray,Mtproto搭建，Proxy搭建">
+<meta name="description" content="学习者导航，一个收录优质网站的导航Page。汇集国内外优质学习平台网站，分享办公应用、学术百科、音乐艺术、查经研经……学习者必备的上网导航，David Lee先森的自由page。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="学习者导航">
+<meta property="og:url" content="https://cceclub.org">
+<meta property="og:site_name" content="学习者导航">
+<meta property="og:image" content="icon.png">
+<meta property="og:description" content="学习者导航，一个收录优质网站的导航Page。汇集国内外优质学习平台网站，分享办公应用、学术百科、音乐艺术、查经研经……学习者必备的上网导航，David Lee先森的自由page。">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.form-control {
+    height: 35px;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    width: 60%;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075) ;
+}
+.form-control:hover {
+    border: #66afe9 solid 1px;
+}
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+}
+.btn {
+    padding: 5px 10px;
+    width: 85px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color:#ccc
+}
+.btn-search {
+    border-radius: 4px;
+    background: #3399CC;
+    color: #FFF;
+    border: #3399CC solid 1px;
+}
+.btn-search:hover {
+    background: #FFF;
+    color: #3399CC;
+    border: #3399CC solid 1px;
+}
+</style></head>
+<body>
+<div class="navbar">
+	<a href="#"><img src="icon.png" width="15"/></a>
+	<a href="/index.html">首页</a>
+	<a href="http://bbs.cceclub.org">论坛</a>
+	<a href="/note.html">笔记</a>
+	<a href="https://cceclub.org" class="right">#</a>
+</div>
+<div class="row">
+	<div class="main">
+		<h4><img src="/icon/Browser-icon.png" height="18"/>搜索引擎</h4>
+	    <form name="search" action="https://www.google.com/search" target="_blank">
+	        <div class="input-group" style="text-align:center;">
+	            <img src="/icon/google-icon.png" height="20"/>
+	            <input type="text" name="q" class="form-control" placeholder="请输入关键字" maxlength="100">
+	            <span class="input-group-btn">
+	                <button class="btn btn-default btn-search" name="search" type="submit">谷歌搜索</button>
+	            </span></div>
+		</form>
+	    <form name="search" action="https://cn.bing.com/search" target="_blank">
+	        <div class="input-group" style="text-align:center;">
+	            <img src="/icon/Bing-icon.png" height="20"/>
+	            <input type="text" name="q" class="form-control" placeholder="请输入关键字" maxlength="100">
+	            <span class="input-group-btn">
+	                <button class="btn btn-default btn-search" name="search" type="submit">必应搜索</button>
+	            </span></div>
+		</form>
+		<nav class="codrops-demos" style="text-align:center;">
+			<a href="https://duckduckgo.com" target="_blank"><img src="/icon/DuckDuckGo-icon.png" height="12"/> DuckDuckGo</a>
+			<a href="https://translate.google.cn" target="_blank">谷歌翻译</a>
+		    <a href="https://scholar.google.com" target="_blank">谷歌学术</a>
+		    <a href="https://mail.google.com/" target="_blank"><img src="/icon/Gmail-icon.png" height="12"/> Gmail</a>
+		    <a href="https://zh.wikipedia.org" target="_blank"><img src="/icon/Wikipedia-icon.png" height="12"/> 维基百科</a>
+		<br/>
+		<br/>
+		<div style="BORDER-TOP: #ccc 1px dashed; OVERFLOW: hidden; HEIGHT: 1px"></div>
+		</nav>
+		<nav class="codrops-demos">
+		<br/>
+		<br/>
+		 
+		<h4><img src="/icon/mp3-icon.png" width="18"/>音频/视频</h4>
+		    <a href="https://music.163.com/" target="_blank"><img src="/icon/music-icon.png" height="12"/> 网易云音乐</a>
+		    <a href="http://music.ifkdy.com" target="_blank">疯狂音乐搜索</a>
+		    <a href="http://www.gequdaquan.net/gqss/" target="_blank">音乐聚合搜索引擎</a>
+		    <a href="http://www.fuyin.fm" target="_blank">福音FM</a>
+		    <a href="http://www.zanmeishi.com" target="_blank">赞美诗网</a>
+		    <a href="https://www.ximalaya.com/" target="_blank">喜马拉雅</a>
+		    <br/>
+		    <a href="https://www.youtube.com" target="_blank"><img src="/icon/YouTube-icon.png" height="12"/> Youtube</a>
+		    <!--<a href="http://mp4ba.cc" target="_blank">MP4吧（电影下载）</a>-->
+		    <a href="https://www.bilibili.com" target="_blank">哔哩哔哩</a>
+		    <a href="http://bbs.rarbt.cc/" target="_blank">RARBT中文站</a>
+		    <a href="https://www.btbtt.live/" target="_blank">BT之家</a>
+		    <a href="http://www.mp4ba.la/" target="_blank">高清MP4</a>
+		    <a href="https://rarbg.to/" target="_blank">RARBG英文站</a>
+		
+		<h4><img src="/icon/Bible-Book-icon.png" width="18"/>查经资源</h4>
+		    <a href="https://bible.fhl.net/gbdoc/index.html" target="_blank">信望爱圣经工具资源中心</a>
+		    <a href="https://bible.fhl.net/gbdoc/NUI/" target="_blank">信望爱圣经工具</a>
+		    <a href="http://home.yanjinggongju.com/b/web/" target="_blank">China牧者-研经工具</a>
+		    <a href="http://ts.zhsw.org/ywsj/2/index.htm" target="_blank">原文圣经（逐字中译）</a>
+		    <a href="http://ts.zhsw.org/123/z/xjysjbjzs/index.htm" target="_blank">新旧约圣经背景注释</a>
+		    <a href="http://www.godcom.net/chajing/" target="_blank">查经资料大全</a>
+		    <a href="http://zhsw.org/123/z/cjzlzh/" target="_blank">查经资料总汇</a>
+		    
+		<h4><img src="/icon/Apple-Books-icon.png" width="18"/>图书/学术</h4>
+		    <a href="https://epubw.com" target="_blank">免费优质电子书下载（ePUBw）</a>
+		    <a href="https://haobook.org" target="_blank">好书-电子书下载网站</a>
+		    <a href="https://www.wdl.org" target="_blank">世界数字图书馆</a>
+		    <a href="https://scholar.google.com" target="_blank">谷歌学术</a>
+		    <a href="https://www.ixueshu.com" target="_blank">爱学术</a><br/>
+		    <a href="https://www.kongfz.com" target="_blank">孔夫子旧书网</a>
+		    <a href="http://www.dangdang.com" target="_blank">当当</a>
+		
+		<h4><img src="/icon/Wikipedia-globe-icon.png" width="18"/>百科</h4>
+		    <a href="https://zh.wikipedia.org" target="_blank"><img src="/icon/Wikipedia-icon.png" height="12"/> 维基百科</a>
+		    <a href="https://www.merriam-webster.com" target="_blank">韦氏字典</a>
+		    <a href="http://zhsw.org/bk/" target="_blank"><img src="/icon/sw-logo.gif" height="12"/> 圣网百科（基督教百科）</a>
+		    
+		<!--<h4><img src="/icon/Messages-icon.png" width="18"/>社交</h4>
+		    <a href="https://twitter.com" target="_blank"><img src="/icon/Twitter-icon.png" height="12"/> Twitter</a>
+		    <a href="https://telegram.org" target="_blank"><img src="/icon/Telegram-icon.png" height="12"/> Telegram</a>
+		    <a href="https://telegra.ph" target="_blank">Telegaph</a>
+		    <a href="https://signal.org" target="_blank"><img src="/icon/Signal-icon.png" height="12"/> Signal</a>
+		    <a href="https://www.facebook.com" target="_blank"><img src="/icon/facebook-icon.png" width="12"/> FaceBook</a>
+		    <a href="https://mail.google.com/" target="_blank"><img src="/icon/Gmail-icon.png" height="12"/> Gmail</a>-->
+		    
+		<h4><img src="/icon/Telegram-icon.png" width="18"/>Telegram下载</h4>
+		    <a href="https://itunes.apple.com/app/telegram-messenger/id686449807" target="_blank">iOS版下载</a>
+		    <a href="/download/tg.apk" target="_blank">安卓版下载</a>
+		    <a href="https://apps.apple.com/us/app/telegram/id747648890" target="_blank">Mac版下载</a>
+		    <a href="/download/tsetup.exe" target="_blank">Windows版下载</a>
+		    <a href="https://davidlee.lanzous.com/b015e5bah" target="_blank">蓝奏云网盘下载（备用）</a>
+		    <a href="https://t.me/Simplified_Chinese" target="_blank">Telegram中文语言包</a>
+		
+		<h4><img src="/icon/Surfboard.png" width="18"/>网站/编程</h4>
+		    <a href="http://www.iconarchive.com" target="_blank">IconArchive</a>
+		    <a href="https://www.runoob.com" target="_blank">菜鸟教程（网站）</a>
+		    <a href="https://www.w3school.com.cn" target="_blank">W3School</a>
+		    <a href="http://www.htmleaf.com/html5/html5-canvas/" target="_blank">html5 canvas</a>
+		    <a href="http://tool.chinaz.com/tools/html_js.aspx" target="_blank">HTML/JS转换工具</a>
+		    <a href="/speedtest-master/example-multipleServers-full.html" target="_blank">HTML5 Speedtest</a>
+		    <a href="/speedtest-master/example-multipleServers-pretty.html" target="_blank">HTML5 Speedtest2</a>
+		    <a href="https://tool.css-js.com/rgba.html" target="_blank">RGB与16进制色互转</a>
+		    <a href="https://www.css-js.com/tools/rgba.html" target="_blank">RGBA与Hex颜色转换</a>
+		    <a href="http://www.ico51.cn" target="_blank">ICO图标转换</a>
+		    <a href="https://tinypng.com" target="_blank">TingPNG压缩</a>
+		    <a href="https://compress.zhaoxi.net" target="_blank">图片压缩和尺寸修改</a>
+		    <a href="https://search.google.com/search-console/about" target="_blank">Google Search Console</a>
+		<br/>
+		<br/>
+		</nav>
+		<p style="text-align:center; color:red;" >免责声明：本站基于互联网自由分享，涉及上述网站内的任何信息或交易皆与本站无关。且本站不属于网站内容的提供者、制作者、所有者，一切版权归原网站所有；本页仅用以个人收藏和导航，请按照相关工具原定用途及原单位的规定使用；对于违反使用者所在地相关法律或原出处规定导致的一切后果本站不承担任何法律责任。</p>
+	</div>
+	<div class='sidebar'>
+	    <div class='side'>
+		<h3>关于本站</h3>
+		<p style='text-align:center;'><img src='icon.png' width='85'/></p>
+		<p style='text-align:center;'>一个收录优质网站的导航Page
+		<br/>简单、简约
+		<br/>David Lee先森的自由Page</p>
+		</div>
+		<div class='side'>
+		<h3>捐助本站</h3>
+		<p style='text-align:center;'>此网站为出于兴趣所作<br/>非营利网站</p>
+		</div>
+		<div class='side'>
+		<h3>联系方式</h3>
+		<p style='text-align:center;'>暂不开放</p>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<h5>[Designed by David.Lee / Copyright © 2020]</h5>
+</div>
+<script language="javascript" type="text/javascript" src="/template/js/jihe.js"></script>
+</body>
+</html>
